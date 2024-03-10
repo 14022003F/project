@@ -7,24 +7,23 @@
     <title>login</title>
 </head>
 <body>
-    <fieldset>
-        <legend>LOGIN</legend>
-        <form>
-            <label>Name :</label>
-            <input type="text"><br>
-            <label>Birth date :</label>
-            <input type="date"><br>
-            <label>Tel :</label>
-            <input type="tel"><br>
-            <label>Address :</label>
-            <input type="text"><br>
-            <label>E-mail :</label>
-            <input type="text"><br>
-            <label>Password :</label>
-            <input type="password"><br>
-            <button type="submit">Login</button>
-            <button type="reset">Reset</button>
-        </form>
-    </fieldset>
+    <div class="login-page">
+        <div class="form">
+          <form class="register-form">
+            <input type="text" placeholder="name"/>
+            <input type="password" placeholder="password"/>
+            <input type="text" placeholder="email address"/>
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form class="login-form">
+            <input type="text" placeholder="username"/>
+            <input type="password" placeholder="password"/>
+            <button>login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+      <script src="loginpat.js"></script>
 </body>
 </html>
