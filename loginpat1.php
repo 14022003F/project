@@ -20,7 +20,7 @@
             <input type="text" placeholder="username"/>
             <input type="password" placeholder="password"/>
             <button>login</button>
-            <p class="message">Not registered? <a href="loginpat2.html">Create an account</a></p>
+            <p class="message">Not registered? <a href="loginpat2.php">Create an account</a></p>
           </form>
         </div>
       </div>
