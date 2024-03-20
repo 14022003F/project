@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +9,15 @@
 </head>
 <body>
     <div class="login-page">
+        <?php 
+  
+           print_r($_POST);
+          ?>
         <div class="form">
-          <!--<form class="register-form">
-            <input type="text" placeholder="name"/>
-            <input type="password" placeholder="password"/>
-            <input type="text" placeholder="email address"/>
-            <button>create</button>
-            <p class="message">Already registered? <a href="#">Sign In</a></p>
-          </form>-->
-          <form class="login-form">
-            <input type="text" placeholder="username"/>
-            <input type="password" placeholder="password"/>
-            <button>login</button>
+          <form class="login-form" action="loginpat1.php" methode="post">
+            <input type="text" placeholder="CIN" class="form-input" name="cin" id="cin"/>
+            <input type="password" placeholder="PASSWORD" class="form-input" name="password" id="password"/>
+            <input type="submit" value="login" class="form-btn" name="submit"/>
             <p class="message">Not registered? <a href="loginpat2.php">Create an account</a></p>
           </form>
         </div>
