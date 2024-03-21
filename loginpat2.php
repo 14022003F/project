@@ -17,9 +17,7 @@
                   $password = $_POST['password'];
                   $email = $_POST['email'];
                   $bdate = $_POST['bdate'];
-      
-               //verifying the unique email
-      
+          
                $verify_query = mysqli_query($con,"SELECT cin FROM patient WHERE cin='$cin'");
       
                if(mysqli_num_rows($verify_query) !=0 ){
@@ -35,11 +33,7 @@
                   echo "<div class='message'>
                             <p>Registration successfully!</p>
                         </div> <br>";
-                  echo "<a href='loginpat1.php'><button class='form-btn'>Login Now</button>";
-               
-      
-               }
-      
+                  echo "<a href='loginpat1.php'><button class='form-btn'>Login Now</button>";}
                }else{
                
               ?>
@@ -52,12 +46,6 @@
             <input type="submit" value="create" class="form-btn" name="submit"/>
             <p class="message">Already registered? <a href="loginpat1.php">Sign In</a></p>
           </form>
-          <!--<form class="login-form">
-            <input type="text" placeholder="username"/>
-            <input type="password" placeholder="password"/>
-            <button>login</button>
-            <p class="message">Not registered? <a href="#">Create an account</a></p>
-          </form>-->
         </div>
         <?php } ?>
       </div>

@@ -1,3 +1,29 @@
+<?php
+session_start();
+// Output session data for debugging
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
+?>
+
+<?php 
+session_start();
+
+if (!isset($_SESSION['valid'])) {
+
+    header("Location: loginpat1.php");
+    exit();
+}
+
+include("login.php");
+
+$cin = $_SESSION['valid'];
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+$bdate = $_SESSION['bdate'];
+$num = $_SESSION['num'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +42,11 @@
                 </div>
                 <div class="patient-info">
                     <h2>Personal Information</h2>
-                    <p><strong>Patient Num°:</strong>.....</p>
-                    <p><strong>Name:</strong>.....</p>
-                    <p><strong>Birthdate:</strong>......</p>
-                    <p><strong>Email:</strong>.....</p>
+                    <p><strong>Patient Num°:</strong> <?php echo $num; ?></p>
+                    <p><strong>Name:</strong> <?php echo $name; ?></p>
+                    <p><strong>Birthdate:</strong> <?php echo $bdate; ?></p>
+                    <p><strong>Email:</strong> <?php echo $email; ?></p>
                     <p><strong>Doctor:</strong>.......</p>
-                    <!-- Add more personal details here -->
                 </div>
             </div>
             <div class="description">
@@ -37,8 +62,7 @@
             </div>
             <div class="appointments">
                 <h2>Next Appointment</h2>
-                <p>Date: January 10, 2023</p>
-                <!-- Add more appointment details here -->
+                <p>Date:......</p>
             </div>
         </div>
     </div>
